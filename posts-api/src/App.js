@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-function App() {
+const App = (props) => {
+  const [posts, setPosts] = useState([]);
+  const { id } = useParams();
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h2>Welcome to Posts App!</h2>
+      </div>
+      <p className="App-intro">
+        Stay up-to-date on all the recent posts below.
+      </p>
     </div>
   );
-}
+};
 
 export default App;
